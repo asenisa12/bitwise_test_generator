@@ -13,7 +13,7 @@
 using namespace std;
 
 extern string hex1,hex2,hex3,hex4;
-extern vector<string> rows;
+extern vector<string> rows,res_rows;
 extern int even[4],odd[4],count;
 
 void create_files(int num,bool type, bool easy);
