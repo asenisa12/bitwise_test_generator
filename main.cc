@@ -1,7 +1,7 @@
 #include "headers/generate.hh"
 
-int main(){
-	create_files(3,true,true);
+int main(int argc, char* argv[]){
+	create_files(atoi(argv[1]),true,true);
 	
 	return 0;
 }
