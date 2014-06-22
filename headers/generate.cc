@@ -301,6 +301,13 @@ void create_files(int num, bool type, bool easy){
 			resfile<< (*it) <<endl;
 		resfile.close();
 		res_rows.clear();
+
+		stringstream command;
+		if(type){
+			command<<"python html_converter.pyc test"<<i+1<<" html";
+		}else command<<"python html_converter.pyc test"<<i+1<<" pdf";
+
+		system(command.str().c_str());
 	}
 	
 }
