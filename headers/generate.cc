@@ -46,29 +46,7 @@ void generate_num(bool easy){
 	hex4= number4.str();
 }
 
-void generate_test_answer(string print){
-	ofstream cfile("result.c");
-	cfile <<"#include <stdio.h>\n int main(){\n";
 
-	while(strcmp(rows[count].c_str(),"\n")){
-		cfile <<(rows[count]).c_str();
-		count++;
-	}
-	count+=2;
-	cfile<<"printf("<<print.c_str()<<");";
-	cfile <<"return 0;\n}\n";
-	cfile.close();
-
-	system("gcc result.c");
-	system("./a.out > res.txt");
-	ifstream in("res.txt");
-	string str;
-	in >> str;
-	res_rows.push_back(str);
-	system("rm a.out");
-	system("rm result.c");
-	system("rm res.txt");
-}
 
 int generate_tasktype1(bool a){
 	stringstream row;	
@@ -109,25 +87,7 @@ void gen_insert_orig(){
 	row.str("");
 }
 
-void gen_a_b(bool AND){
-	stringstream row;
 
-	if(AND){
-		row<<"int a = orig | (insert << "<<even[0] <<");\n";
-		rows.push_back(row.str());
-		row.str("");
-		row<<"int b = orig | (insert << "<<even[1] <<");\n";
-		rows.push_back(row.str());
-		row.str("");
-	}else{
-		row<<"int a = orig | (insert << "<<even[0] <<");\n";
-		rows.push_back(row.str());
-		row.str("");
-		row<<"int b = orig | (insert << "<<even[1] <<");\n";
-		rows.push_back(row.str());
-		row.str("");
-	}
-}
 
 
 int generate_tasktype2(bool AND,bool fOR){
@@ -232,20 +192,7 @@ int generate_tasktype4(bool twoVar){
 
 	return 9;
 }
-int generate_tasktype5(){
-	stringstream row;
 
-	rows.push_back("left=?    ........\n");
-	row<<"int i = "<<hex1<<";\n";
-	rows.push_back(row.str());
-	row.str("");
-	row<<"int left = "<<hex1<<"| (1 << "<<even[3]<<");\n";
-	rows.push_back(row.str());
-	row.str("");
-	rows.push_back("\n");
-	generate_test_answer("\"6:%x\",left");
-	return 4;
-}
 
 
 void add_to_file(string filename, bool type, bool easy){
