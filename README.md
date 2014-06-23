@@ -6,5 +6,4 @@ bitwise generator written in c++
 
 Python libraries:
 HTML
-sys
 pdfkit
