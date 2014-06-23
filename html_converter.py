@@ -4,7 +4,7 @@ import pdfkit
 
 def main():
 	floder = sys.argv[1]
-
+	name="<p align='center'> Test Number: "+floder[4:] +"<p>"
 	t = HTML.Table(["",""])
 	test=open(floder+"/test.txt",'r')
 	count =0
@@ -38,8 +38,8 @@ def main():
 
 
 	s = str(t)
-	htmlcode= s[:6] + ' align="center"' + s[6:]
-	htmlcodeRes = str(tr)
+	htmlcode= name + s[:6] + ' align="center"' + s[6:]
+	htmlcodeRes =name+ str(tr)
 	if sys.argv[2]=='html':
 		f = open(floder+"/test.html","w")
 		f.write(htmlcode)
