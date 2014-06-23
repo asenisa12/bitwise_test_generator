@@ -37,7 +37,8 @@ int main(int argc, char* argv[]){
 
 	for(;;){
 			cout<<"For numbers of tests input number bigger than [1]: ";
-			cin>>num;
+			cin>>type;
+			num=atoi(type.c_str());
 			cout<<endl;
 			if(num>0){
 				break;
@@ -50,4 +51,3 @@ int main(int argc, char* argv[]){
 		create_files(i,html_pdf,easy_hard);
 
 	return 0;
-}
