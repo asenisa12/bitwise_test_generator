@@ -4,16 +4,16 @@ int main(int argc, char* argv[]){
 	
 	bool html_pdf=false,easy_hard=false;
 	int num;
-	char* type;
+	string type;
 
 	for(;;){
 		cout<<"input [ p ] for pdf and [ h ] for html: ";
 		cin>>type;
 		cout<<endl;
-		if(type[0] == 'p'){
+		if(type.c_str()[0] == 'p'){
 			html_pdf=false;
 			break;
-		}else if(type[0] == 'h'){
+		}else if(type.c_str()[0] == 'h'){
 			html_pdf=true;
 			break;
 		}else cout<<"Error: Wrong Parameter!!!"<<endl;
@@ -25,10 +25,10 @@ int main(int argc, char* argv[]){
 		cout<<"input [ e ] for easy test and [ h ] for hard: ";
 		cin>>type;
 		cout<<endl;
-		if(type[0] == 'h'){
+		if(type.c_str()[0] == 'h'){
 			easy_hard=false;
 			break;
-		}else if(type[0] == 'e'){
+		}else if(type.c_str()[0] == 'e'){
 			easy_hard=true;
 			break;
 		}else cout<<"Error: Wrong Parameter!!!"<<endl;
