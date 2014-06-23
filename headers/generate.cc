@@ -333,6 +333,13 @@ void create_files(int num, bool type, bool easy){
 
 	system(command.str().c_str());
 
+	command.str("");
+	command<<"rm test"<<num+1<<"/test.txt";
+	system(command.str().c_str());
+	command.str("");
+	command<<"rm test"<<num+1<<"/result.txt";
+	system(command.str().c_str());
+
 	
 }
 
