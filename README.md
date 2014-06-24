@@ -13,6 +13,7 @@ ______________________
   
 pdfkit- instalation
 ______________________
+  - $ sudo apt-get install python-pip
   - $ pip install pdfkit
   - $ sudo apt-get install wkhtmltopdf
 
