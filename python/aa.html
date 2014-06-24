@@ -1,0 +1,106 @@
+<TABLE cellpadding="4" style="border: 1px solid #000000; border-collapse: collapse;" border="1">
+ <TR>
+ </TR>
+ <TR>
+ </TR>
+ <TR>
+ </TR>
+ <TR>
+  <TD>a=?     ..........
+<br> int orig =0xB0B0;
+<br> int insert =0x000E;
+<br> int a = orig | (insert << 12);
+<br> </TD>
+  <TD>
+<br> b=?     ..........
+<br> int orig =0xB0B0;
+<br> int insert =0x000E;
+<br> int b = orig | (insert << 10);
+<br> </TD>
+ </TR>
+ <TR>
+  <TD>
+<br> AND=?     ..........
+<br> int orig =0xB0B0;
+<br> int insert =0x000E;
+<br> int a = orig | (insert << 12);
+<br> int b = orig | (insert << 10);
+<br> int AND=a&b;
+<br> </TD>
+  <TD>
+<br> OR=?     ..........
+<br> int orig =0xB0B0;
+<br> int insert =0x000E;
+<br> int a = orig | (insert << 12);
+<br> int b = orig | (insert << 10);
+<br> int OR=a&b;
+<br> </TD>
+ </TR>
+ <TR>
+  <TD>
+<br> OR=?     ..........
+<br> int orig =0xB0B0;
+<br> int insert =0x000E;
+<br> int a = orig | (insert << 12);
+<br> int b = orig | (insert << 10);
+<br> int OR=a^b;
+<br> </TD>
+  <TD>
+<br> left=?    ........
+<br> int i = 0xB0B0;
+<br> int left = 0xB0B0| (1 << 4);
+<br> </TD>
+ </TR>
+ <TR>
+  <TD>
+<br> result =? ..........
+<br> long value1 =0xBB00BB00;
+<br> long value2 =0xB00BE00E;
+<br> int result = (value1 <<4)|(value2 >> 4);
+<br> </TD>
+  <TD>
+<br> result =? ..........
+<br> long value1 =0xBB00BB00;
+<br> long value2 =0xB00BE00E;
+<br> int result = (value1 <<4) ^ (value2 >> 4);
+<br> </TD>
+ </TR>
+ <TR>
+  <TD>
+<br> a,result =? ..........
+<br> long testValue =0xBB00BB00;
+<br> int a =0;
+<br> int result =0;
+<br> if ( (result = testValue & testValue ^ testValue & 
+<br> (1 << 4)) ){
+<br> a=1;
+<br> } else {
+<br> a=2;
+<br> }
+<br> </TD>
+  <TD>
+<br> a =? ..........
+<br> long testValue =0xBB00BB00;
+<br> int a =0;
+<br> if(testValue & (1<<4)){
+<br> a=1;
+<br> } else {
+<br> a=2;
+<br> }
+<br> </TD>
+ </TR>
+ <TR>
+  <TD>
+<br> result =? ..........
+<br> long value1 =0;
+<br> long value2 =66;
+<br> int result = (value1 <<4)|(value2 >> 4);
+<br> </TD>
+  <TD>
+<br> result =? ..........
+<br> long value1 =0;
+<br> long value2 =71;
+<br> int result = (value1 <<4) ^ (value2 >> 4);
+<br> </TD>
+ </TR>
+</TABLE>

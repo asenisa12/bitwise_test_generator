@@ -1,0 +1,75 @@
+a=?     ..........
+int orig =0xB0B0;
+int insert =0x000E;
+int a = orig | (insert << 12);
+
+b=?     ..........
+int orig =0xB0B0;
+int insert =0x000E;
+int b = orig | (insert << 10);
+
+AND=?     ..........
+int orig =0xB0B0;
+int insert =0x000E;
+int a = orig | (insert << 12);
+int b = orig | (insert << 10);
+int AND=a&b;
+
+OR=?     ..........
+int orig =0xB0B0;
+int insert =0x000E;
+int a = orig | (insert << 12);
+int b = orig | (insert << 10);
+int OR=a&b;
+
+OR=?     ..........
+int orig =0xB0B0;
+int insert =0x000E;
+int a = orig | (insert << 12);
+int b = orig | (insert << 10);
+int OR=a^b;
+
+left=?    ........
+int i = 0xB0B0;
+int left = 0xB0B0| (1 << 4);
+
+result =? ..........
+long value1 =0xBB00BB00;
+long value2 =0xB00BE00E;
+int result = (value1 <<4)|(value2 >> 4);
+
+result =? ..........
+long value1 =0xBB00BB00;
+long value2 =0xB00BE00E;
+int result = (value1 <<4) ^ (value2 >> 4);
+
+a,result =? ..........
+long testValue =0xBB00BB00;
+int a =0;
+int result =0;
+if ( (result = testValue & testValue ^ testValue & 
+(1 << 4)) ){
+a=1;
+} else {
+a=2;
+}
+
+a =? ..........
+long testValue =0xBB00BB00;
+int a =0;
+if(testValue & (1<<4)){
+a=1;
+} else {
+a=2;
+}
+
+result =? ..........
+long value1 =0;
+long value2 =66;
+int result = (value1 <<4)|(value2 >> 4);
+
+result =? ..........
+long value1 =0;
+long value2 =71;
+int result = (value1 <<4) ^ (value2 >> 4);
+
