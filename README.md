@@ -18,4 +18,6 @@ ______________________
 
 USAGE
 ------------------------------
-Open type in terminal type ./generator 
+  - $ python -m py_compile html_converter.py
+  - $ make
+  - $./generator 
