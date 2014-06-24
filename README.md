@@ -1,7 +1,7 @@
 bitwise_test_generator
 ======================
 
-bitwise generator written in c++
+bitwise generator written in c++ and python
 
 
 required Python libraries:
