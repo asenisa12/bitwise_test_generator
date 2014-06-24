@@ -10,5 +10,5 @@ HTML.py
 pdfkit
 
 USAGE
-======
+------------------------------
 Open type in terminal ./generator and follow the instructions
