@@ -4,11 +4,17 @@ bitwise_test_generator
 bitwise generator written in c++
 
 
-Python libraries:
+required Python libraries:
 ------------------------------
 HTML.py - instalation
-pdfkit
-
+______________________
+  - http://www.decalage.info/files/HTML.py-0.04.zip download link
+  - $ sudo python setup.py install
+  
+pdfkit- instalation
+______________________
+  - $ pip install pdfkit
+  - $ sudo apt-get install wkhtmltopdf
 
 USAGE
 ------------------------------
