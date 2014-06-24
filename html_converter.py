@@ -40,16 +40,16 @@ def main():
 	s = str(t)
 	htmlcode= name + s[:6] + ' align="center"' + s[6:]
 	htmlcodeRes =name+ str(tr)
-	if sys.argv[2]=='html':
-		f = open(floder+"/test.html","w")
-		f.write(htmlcode)
-		r = open(floder+"/result.html","w")
-		r.write(htmlcodeRes)
-		f.close()
-		r.close()
-	else:	
-		pdfkit.from_string(htmlcode, floder+'/test.pdf')
-		pdfkit.from_string(htmlcodeRes, floder+'/result.pdf')
+
+	f = open(floder+"/test"+str(floder[4:])+".html","w")
+	f.write(htmlcode)
+	r = open(floder+"/result"+str(floder[4:])+".html","w")
+	r.write(htmlcodeRes)
+	f.close()
+	r.close()
+
+	pdfkit.from_string(htmlcode, floder+"/test"+str(floder[4:])+".pdf")
+	pdfkit.from_string(htmlcodeRes, floder+"/result"+str(floder[4:])+".pdf")
 
 
 
