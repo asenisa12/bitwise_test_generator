@@ -5,7 +5,7 @@ bitwise generator written in c++
 
 
 Python libraries:
-HTML
+HTML.py
 pdfkit
 
 USAGE
