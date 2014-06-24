@@ -6,9 +6,10 @@ bitwise generator written in c++
 
 Python libraries:
 ------------------------------
-HTML.py
+HTML.py - instalation
 pdfkit
+
 
 USAGE
 ------------------------------
-Open type in terminal ./generator and follow the instructions
+Open type in terminal type ./generator 
