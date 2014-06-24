@@ -9,6 +9,8 @@ required Python libraries:
 HTML.py - instalation
 ______________________
   - http://www.decalage.info/files/HTML.py-0.04.zip download link
+  - extract
+  - in extracted floder
   - $ sudo python setup.py install
   
 pdfkit- instalation
