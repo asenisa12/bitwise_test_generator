@@ -51,3 +51,4 @@ int main(int argc, char* argv[]){
 		create_files(i,html_pdf,easy_hard);
 
 	return 0;
+}
